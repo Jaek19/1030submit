@@ -1,0 +1,240 @@
+:root {
+  --base-color: #222328;
+  --mm--bgColor: #e08a9b;
+  --mm--hoBgColor: #db3d84;
+  --sm-bgColor: #e9f2c1;
+  --sm--hoBgColor: #a0c322;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10pt;
+  line-height: 180%;
+}
+html,
+body {
+  font-family: 'Nanum Gothic Coding', cursive;
+  color: var(--base-color);
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+#layout {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#left {
+  flex-basis: 300px;
+}
+
+#logo {
+  display: block;
+  width: 90%;
+  padding: 20px 10px;
+}
+
+#right {
+  flex-basis: 900px;
+}
+
+ul li {
+  margin-bottom: 1px;
+}
+.mainMenu {
+  display: block;
+  background-color: var(--mm--bgColor);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 30px;
+}
+.mainMenu:hover {
+  background-color: var(--mm--hoBgColor);
+  color: white;
+}
+
+#left li:hover .mainMenu {
+  background-color: var(--mm--hoBgColor);
+  color: white;
+}
+#left li:hover .subMenu {
+  height: 110px;
+}
+#left li:hover .subMenu a:hover {
+  background-color: var(--sm--hoBgColor);
+  color: white;
+}
+
+.subMenu {
+  background-color: var(--sm-bgColor);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.subMenu a {
+  display: block;
+  padding: 5px 30px;
+}
+
+#slideArea {
+  height: 450px;
+  overflow: hidden;
+}
+#slide {
+  position: relative;
+  left: 0;
+  display: flex;
+}
+#slide img {
+  width: 100%;
+  display: block;
+}
+main {
+  height: 200px;
+  display: flex;
+  padding-top: 20px;
+  gap: 15px;
+}
+
+h2 {
+  display: inline-block;
+  background: #ddd;
+  border: 1px solid #666;
+  border-bottom: none;
+  padding: 1px 6px 0px 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transform: translateY(3px);
+}
+h2 button {
+  color: var(--base-color);
+}
+
+#notice {
+  position: relative;
+}
+
+#notice h2 {
+  position: relative;
+  background-color: #c3d680;
+}
+#notice h2 button {
+  background: none;
+  border: none;
+}
+
+#notice ul {
+  list-style-position: inside;
+  padding-top: 10px;
+  padding-left: 5px;
+  line-height: 200%;
+}
+#notice li span {
+  float: right;
+}
+#notice a:hover {
+  text-decoration: underline;
+  color: #514dbc;
+}
+
+#popup {
+  position: fixed;
+  z-index: 1;
+  background: white;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  width: 500px;
+  height: 500px;
+  top: 100px;
+  left: 300px;
+  list-style: none;
+  border-radius: 10px;
+  padding: 30px;
+  display: none;
+}
+#popup div {
+  position: relative;
+}
+#popup h3 {
+  padding-bottom: 10px;
+}
+#popup button {
+  float: right;
+}
+
+#gallery {
+  flex: 1.3;
+}
+#gallery h2 {
+  margin-left: 3px;
+  background-color: #c3d680;
+}
+#gallery h2 button {
+  background: none;
+  border: none;
+}
+#gallery > div {
+  padding-left: 5px;
+  padding-top: 13px;
+}
+#gallery > div > div {
+  display: flex;
+  gap: 3px;
+}
+#gallery div a {
+  margin: 3px;
+}
+
+#banner {
+  flex: 0.85;
+  position: relative;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+#banner h2 {
+  display: none;
+}
+#banner img {
+  border-radius: 5px;
+}
+
+footer {
+  flex-basis: 100%;
+  display: flex;
+  border: 2px solid #ccc;
+}
+footer > a img {
+  max-width: 200px;
+  margin-left: 50px;
+}
+footer > div {
+  border-left: 2px dashed #ccc;
+  margin-left: 100px;
+}
+footer > div a {
+  padding: 7px;
+}
+footer > div a:hover {
+  text-decoration: underline;
+  color: black;
+}
+footer nav {
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+footer p {
+  border-top: 2px dashed #ccc;
+  height: 50px;
+  padding: 20px;
+}
